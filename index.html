@@ -1,153 +1,59 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <title>terutyanneru</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "SimSun", "Source Han Serif SC", "Noto Serif SC", serif;
-      background: linear-gradient(180deg, #f9f9f9, #f0f0f0);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* 顶部标题栏 */
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(135deg, #ffffff, #f5f5f5);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #666;
-    }
-
-    /* 主体内容 */
-    .section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      flex-wrap: wrap;
-      opacity: 0; /* 初始隐藏 */
-      transform: translateY(50px);
-      transition: all 0.8s ease;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    .section img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .text {
-      flex: 1;
-      min-width: 250px;
-    }
-    .text h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .text p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    a {
-  font-family: "SimSun", serif;
-  font-size: 0.9em; /* 比正文小一点 */
-  color: #6b4f4f; /* 温柔的棕灰色 */
-  text-decoration: none; /* 去掉默认下划线 */
-  border-bottom: 1px solid rgba(107,79,79,0.3); /* 细底线 */
-  padding: 2px;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #a97474; /* 鼠标移上去时变暖色 */
-  border-bottom-color: rgba(169,116,116,0.6);
-  transform: scale(1.05); /* 微微放大 */
-}
-
-    /* 脚注 */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #f5f5f5;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    footer a {
-      color: #0077aa;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.3s ease;
-    }
-    footer a:hover {
-      border-color: #0077aa;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>晴阳的空间</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 顶部标题栏 -->
-  <header>
-    <h1>欢迎来到我的个人网站</h1>
-    <p>旅行、写作与梦想</p>
+  <!-- Banner -->
+  <header class="banner">
+    <h1>晴阳的空间</h1>
+    <p>旅行，梦想，与记录</p>
   </header>
 
-  <!-- 第一部分：旅行 -->
-  <div class="section">
-    <img src="images/ABBA9488-FFEB-44C4-893B-C02432EFAA34-1024-000000634AC33C03.JPG" alt="旅行照片">
+  <!-- 旅行 -->
+  <section class="section fade-in">
+    <img src="images/ABBA9488-FFEB-44C4-893B-C02432EFAA34-1024-000000634AC33C03.JPG" alt="旅行">
     <div class="text">
-      <h2>Part1. 旅行</h2>
-      <p>旅行是灵魂的养分。每一次出发，都是一次与世界的对话。</p>
-      <h2><a href="travel.html">holiday</a></h2>
+      <h2>旅行</h2>
+      <p>每一次旅行，都是一次与世界的对话。</p>
     </div>
-  </div>
+  </section>
 
-  <!-- 第二部分：博客 -->
-  <div class="section">
-    <img src="images/IMG_1550.jpeg" alt="博客图片">
-    <div class="text">
-      <h2>Part2. 博客</h2>
-      <p>偶尔是故事，偶尔是心情，更希望能与你产生共鸣。</p>
-      <p>小小的文字，传递的是动人的力量。</p>
-      <h2><a href="vlog.html">blog</a></h2>
-    </div>
-  </div>
+  <hr>
 
-  <!-- 第三部分：梦想 -->
-  <div class="section">
-    <img src="images/IMG_7447.jpeg" alt="梦想图片">
+  <!-- 博客 -->
+  <section class="section fade-in reverse">
     <div class="text">
-      <h2>Part3. 梦想</h2>
-      <p>梦语，悄悄呢喃。</p>
-      <p>关于梦想，从未停止。也许我们永远可以肆意的异想天开。</p>
+      <h2><a href="#">博客</a></h2>
+      <p>记录我的所见所感，分享生活与思考。</p>
     </div>
-  </div>
- <!-- 第四部分：生活 -->
-  <div class="section">
-    <img src="images/IMG_6286.jpeg" alt="梦想图片">
+    <img src="images/IMG_1550.jpeg" alt="博客">
+  </section>
+
+  <hr>
+
+  <!-- 梦想 -->
+  <section class="section fade-in">
+    <img src="images/IMG_7447.jpeg" alt="梦想">
     <div class="text">
-      <h2>Part4. 生活</h2>
-      <p>日复一日，那些小小的闪耀的瞬间。</p>
+      <h2>梦想</h2>
+      <p>梦想让我们保持热爱，也让生活更有意义。</p>
     </div>
-  </div>
+  </section>
+
+  <hr>
+
+  <!-- 生活 -->
+  <section class="section fade-in reverse">
+    <div class="text">
+      <h2>生活</h2>
+      <p>平凡的日子里，也有值得记录的美好。</p>
+    </div>
+    <img src="images/IMG_6286.jpeg" alt="生活">
+  </section>
   <!-- 脚注联系方式 -->
   <footer>
     📷 Instagram：<a href="https://www.instagram.com/teruuuuu_3/?next=%2F" target="_blank">teruuuuu_3</a> |
@@ -155,16 +61,15 @@ a:hover {
   </footer>
 
   <script>
-    // 滚动时触发淡入
-    const sections = document.querySelectorAll('.section');
+    // 滚动淡入
+    const sections = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.2 });
-
+    });
     sections.forEach(section => observer.observe(section));
   </script>
 
