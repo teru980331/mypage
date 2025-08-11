@@ -6,57 +6,75 @@
    <style>
     body {
       margin: 0;
-      padding: 2rem 4rem;
-      background: linear-gradient(135deg, #ffffff, #e6e6e6);
-      color: #222222;
+      padding: 0;
+      background: linear-gradient(135deg, #f9f9f9, #f2f0eb, #e8f0f7);
+      color: #222;
       font-family: "SimSun", "Source Han Serif SC", "Noto Serif SC", serif;
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 90%;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap; /* 让小屏自动换行 */
+    }
+    .text-section {
+      flex: 1;
+      min-width: 250px;
     }
     h1 {
-      font-weight: 400;
-      font-size: 3.5rem;
-      letter-spacing: 0.1em;
+      font-weight: 700;
+      font-size: 3rem;
+      letter-spacing: 0.05em;
       margin-bottom: 1rem;
-      color: #111111;
+      color: #111;
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-      font-style: normal;
-      text-align: left;
     }
     p {
       font-size: 1.2rem;
-      max-width: 400px;
-      color: #444444;
-      text-align: left;
-      font-style: normal;
+      color: #444;
       margin-bottom: 1rem;
     }
     a {
-      color: #000000;
+      color: #0077aa;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
     }
     a:hover {
-      border-color: #000000;
+      color: #004466;
+      border-color: #004466;
+    }
+    .image-section {
+      flex: 0 0 auto; /* 不强制拉伸 */
+      display: flex;
+      justify-content: center;
     }
     img {
-      max-width: 50%;
+      max-width: 300px; /* 限制最大宽度 */
       height: auto;
-      margin-top: 1rem;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
-<img src="images/IMG_1550.jpeg" alt="我的照片" />  
+<div class="image-section">
+      <img src="images/IMG_1550.jpeg" alt="我的照片" />
+</div>
+
+  
+ <div class="container">
+    <!-- 左侧文字 -->
+<div class="text-section">
+
 <header>
   <h1>欢迎来到我的主页</h1>
 </header>
