@@ -2,8 +2,8 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>MY DREAMLAND</title>
-   <style>
+  <title>我的个人网站</title>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -22,7 +22,7 @@
       width: 90%;
       gap: 2rem;
       align-items: center;
-      flex-wrap: wrap; /* 让小屏自动换行 */
+      flex-wrap: wrap;
     }
     .text-section {
       flex: 1;
@@ -52,63 +52,51 @@
       color: #004466;
       border-color: #004466;
     }
+    .contact {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
     .image-section {
-      flex: 0 0 auto; /* 不强制拉伸 */
+      flex: 0 0 auto;
       display: flex;
       justify-content: center;
     }
     img {
-      max-width: 300px; /* 限制最大宽度 */
+      max-width: 300px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
+    audio {
+      display: none; /* 隐藏音乐播放器 */
+    }
   </style>
 </head>
 <body>
-  
- <div class="container">
+  <div class="container">
     <!-- 左侧文字 -->
-<div class="text-section">
+    <div class="text-section">
+      <h1>你好，我是 XXX</h1>
+      <p>欢迎来到我的个人网站！这里记录着我的生活、旅行和思考。</p>
+      <p>你也可以浏览我的 <a href="blog/">博客文章</a>。</p>
 
-<header>
-  <h1>欢迎来到我的主页</h1>
-</header>
- <p>Dream,Travel,Thinkings</p>
-
-<main>
-  <h2>关于我</h2>
-  <p>1998年我出生于这个奇妙的世界。探索这个世界，也许可以从现在开始</p>
-  
-  <!-- Instagram & Email -->
+      <!-- Instagram & Email -->
       <div class="contact">
-        📷 Instagram：<a href="https://www.instagram.com/teruuuuu_3/?next=%2F" target="_blank">teruuuuu_3</a><br>
-        📧 邮箱：<a href="mailto:terutyanneru@gmail.com">MyGmail</a>
+        📷 Instagram：<a href="https://instagram.com/你的用户名" target="_blank">@你的用户名</a><br>
+        📧 邮箱：<a href="mailto:你的邮箱地址">你的邮箱地址</a>
       </div>
     </div>
-</main>
 
-<nav>
-  <a href="/">首页</a>
-</nav>
-<nav>
-  <a href="/about.html">关于我</a>
-</nav>
-<nav>
-  <a href="/boke.html">博客</a>
-</nav>
-<nav>
-  <a href="/boke.html">contact me</a>
-</nav>  
-  
-<footer>
-  &copy; 2025 晴阳 | 为我的每一个可能留下脚印
-</footer>
-    </div>
-   
-<div class="image-section">
+    <!-- 右侧图片 -->
+    <div class="image-section">
       <img src="images/IMG_1550.jpeg" alt="我的照片" />
-</div>
+    </div>
   </div>
+
+  <!-- 背景音乐 -->
+  <audio autoplay loop>
+    <source src="music/你的音乐文件.mp3" type="audio/mpeg">
+    你的浏览器不支持音频播放。
+  </audio>
 </body>
 </html>
